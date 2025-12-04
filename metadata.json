@@ -1,0 +1,8 @@
+{
+  "name": "TAJ - Pre-owned Wig Marketplace",
+  "description": "A premium marketplace for buying and selling pre-owned wigs. Features AI-powered listing assistance, secure COD payments, and a friendly community for wig lovers.",
+  "requestFramePermissions": [
+    "camera",
+    "microphone"
+  ]
+}
