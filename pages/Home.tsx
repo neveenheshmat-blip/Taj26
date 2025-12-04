@@ -2,7 +2,7 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { Wig } from '../types';
 import { storeService } from '../services/integration';
-import { Filter, ChevronLeft, ChevronRight, ArrowUpDown, Banknote, Download, X } from 'lucide-react';
+import { Filter, ChevronLeft, ChevronRight, ArrowUpDown, Download, X } from 'lucide-react';
 import { ProductCard } from '../components/ProductCard';
 import { Logo } from '../components/Logo';
 
@@ -65,31 +65,25 @@ export const Home: React.FC<HomeProps> = ({ onProductClick, onInstallApp, canIns
     <div className="pb-24 md:pb-12 bg-white min-h-screen font-sans">
       {/* Header / Logo Section */}
       <header className="pt-8 pb-6 px-6 text-center border-b border-gray-50 bg-white overflow-hidden relative">
-        {/* Decorative background dots for comic feel */}
-        <div className="absolute inset-0 opacity-10 pointer-events-none" style={{ backgroundImage: 'radial-gradient(#f43f5e 2px, transparent 2px)', backgroundSize: '20px 20px' }}></div>
+        {/* Decorative background - Subtle Grid instead of Dots */}
+        <div className="absolute inset-0 opacity-30 pointer-events-none" style={{ backgroundImage: 'linear-gradient(#ffe4e6 1px, transparent 1px), linear-gradient(90deg, #ffe4e6 1px, transparent 1px)', backgroundSize: '20px 20px' }}></div>
         
         {/* Mobile Logo */}
         <div className="md:hidden mb-4 relative flex items-center justify-center">
             <Logo variant="comic" className="scale-125" />
         </div>
         
-        <p className="text-secondary-500 font-bold text-lg font-comic mb-2 tracking-wide text-primary-600/80 relative z-10">
-          باروكة تروح و باروكة تيجى
-        </p>
-
-        <div className="flex flex-wrap items-center justify-center gap-2 relative z-10 mb-2">
-            <div className="inline-block border border-black bg-yellow-300 py-1 px-4 transform -rotate-1 shadow-[2px_2px_0px_rgba(0,0,0,1)]">
-                <h2 className="text-xs md:text-sm font-black tracking-widest text-black uppercase font-sans">
-                    Human Hair Only
-                </h2>
-            </div>
-            <div className="inline-flex items-center space-x-1 border border-black bg-white py-1 px-3 transform rotate-1 shadow-[2px_2px_0px_rgba(0,0,0,1)] rounded-full">
-                 <Banknote size={14} className="text-green-600" />
-                 <span className="text-[10px] md:text-xs font-bold text-black uppercase">Cash on Delivery</span>
-            </div>
+        {/* Slogan Update: Bigger, Clear, Catchy, Crowns */}
+        <div className="relative z-10 my-8">
+            <h1 className="font-black text-3xl md:text-5xl text-secondary-900 leading-snug drop-shadow-sm tracking-wide" dir="rtl">
+              <span className="text-primary-500 inline-block transform hover:scale-110 transition-transform duration-300">باروكة</span> تروح 
+              <span className="mx-3 inline-block animate-bounce text-4xl align-middle">👑</span>
+              و <span className="text-primary-500 inline-block transform hover:scale-110 transition-transform duration-300">باروكة</span> تيجى 
+              <span className="mx-3 inline-block animate-bounce text-4xl align-middle" style={{ animationDelay: '0.5s' }}>👑</span>
+            </h1>
         </div>
 
-        <h1 className="text-2xl md:text-4xl font-display font-bold text-secondary-900 mt-4 relative z-10">
+        <h1 className="text-xl md:text-3xl font-display font-bold text-secondary-400 mt-2 relative z-10 opacity-80">
           Find Your Human Hair Crown
         </h1>
       </header>
@@ -159,14 +153,14 @@ export const Home: React.FC<HomeProps> = ({ onProductClick, onInstallApp, canIns
          </div>
       </div>
 
-      {/* 3 Big Clickable Photos */}
+      {/* 3 Big Clickable Photos - WOMEN HAIR ONLY */}
       <div className="px-6 py-4 space-y-6 md:space-y-0 md:grid md:grid-cols-3 md:gap-6">
         {/* Short */}
         <button 
           onClick={() => setActiveCategory('short')}
           className={`relative w-full h-48 md:h-64 rounded-2xl overflow-hidden group shadow-lg transition-all transform ${activeCategory === 'short' ? 'ring-4 ring-primary-300 scale-[1.02]' : 'hover:scale-[1.02]'}`}
         >
-          <img src="https://picsum.photos/800/400?random=200" className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+          <img src="https://images.unsplash.com/photo-1521119989659-a83eee488058?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" alt="Short Wig" />
           <div className="absolute inset-0 bg-black/30 group-hover:bg-black/40 transition-colors flex flex-col items-center justify-center p-4">
              <h3 className="text-white font-display font-bold text-3xl tracking-wide drop-shadow-md">Short Wigs</h3>
              <span className="text-white/90 text-sm font-medium mt-2 bg-white/20 backdrop-blur-sm px-3 py-1 rounded-full border border-white/30">
@@ -180,7 +174,7 @@ export const Home: React.FC<HomeProps> = ({ onProductClick, onInstallApp, canIns
           onClick={() => setActiveCategory('medium')}
           className={`relative w-full h-48 md:h-64 rounded-2xl overflow-hidden group shadow-lg transition-all transform ${activeCategory === 'medium' ? 'ring-4 ring-primary-300 scale-[1.02]' : 'hover:scale-[1.02]'}`}
         >
-          <img src="https://picsum.photos/800/400?random=201" className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+          <img src="https://images.unsplash.com/photo-1605497788044-5a90406410d2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" alt="Medium Wig" />
           <div className="absolute inset-0 bg-black/30 group-hover:bg-black/40 transition-colors flex flex-col items-center justify-center p-4">
              <h3 className="text-white font-display font-bold text-3xl tracking-wide drop-shadow-md">Medium Length</h3>
              <span className="text-white/90 text-sm font-medium mt-2 bg-white/20 backdrop-blur-sm px-3 py-1 rounded-full border border-white/30">
@@ -194,7 +188,7 @@ export const Home: React.FC<HomeProps> = ({ onProductClick, onInstallApp, canIns
           onClick={() => setActiveCategory('long')}
           className={`relative w-full h-48 md:h-64 rounded-2xl overflow-hidden group shadow-lg transition-all transform ${activeCategory === 'long' ? 'ring-4 ring-primary-300 scale-[1.02]' : 'hover:scale-[1.02]'}`}
         >
-          <img src="https://picsum.photos/800/400?random=202" className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+          <img src="https://images.unsplash.com/photo-1562004760-aceed7bb0fe3?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" alt="Long Wig" />
           <div className="absolute inset-0 bg-black/30 group-hover:bg-black/40 transition-colors flex flex-col items-center justify-center p-4">
              <h3 className="text-white font-display font-bold text-3xl tracking-wide drop-shadow-md">Long Wigs</h3>
              <span className="text-white/90 text-sm font-medium mt-2 bg-white/20 backdrop-blur-sm px-3 py-1 rounded-full border border-white/30">

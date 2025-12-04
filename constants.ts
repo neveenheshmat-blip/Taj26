@@ -7,7 +7,7 @@ export const APP_NAME = "TAJ";
 export const MOCK_USER: User = {
   id: 'user_1',
   name: 'Sarah J.',
-  avatar: 'https://picsum.photos/150/150',
+  avatar: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80',
   isSeller: true,
   earnings: 1200.50
 };
@@ -20,7 +20,10 @@ export const MOCK_WIGS: Wig[] = [
     description: 'Only worn once for a photoshoot. This unit is custom colored and styled. Very soft, minimal shedding.',
     price: 3200,
     originalPrice: 4500,
-    images: ['https://picsum.photos/400/500?random=1', 'https://picsum.photos/400/500?random=2'],
+    images: [
+      'https://images.unsplash.com/photo-1629871579564-969c3628e937?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80', 
+      'https://images.unsplash.com/photo-1582095133179-bfd08e2fc6b3?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'
+    ],
     type: WigType.FULL_WIG,
     length: 'Long',
     condition: WigCondition.LIKE_NEW,
@@ -37,7 +40,10 @@ export const MOCK_WIGS: Wig[] = [
     description: 'Perfect for everyday wear! Natural hairline. The lace is already cut but the wig is in great condition.',
     price: 1450,
     originalPrice: 2000,
-    images: ['https://picsum.photos/400/500?random=3'],
+    images: [
+      'https://images.unsplash.com/photo-1596452292700-1c002283e76a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+      'https://images.unsplash.com/photo-1595476104010-b44560a5d784?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'
+    ],
     type: WigType.FULL_WIG,
     length: 'Short',
     condition: WigCondition.GOOD,
@@ -53,7 +59,10 @@ export const MOCK_WIGS: Wig[] = [
     title: 'Blonde 613 Straight',
     description: 'Brand new style! Ready to be dyed or worn as is. High density.',
     price: 2800,
-    images: ['https://picsum.photos/400/500?random=4', 'https://picsum.photos/400/500?random=5'],
+    images: [
+      'https://images.unsplash.com/photo-1560829141-9988019e917d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80', 
+      'https://images.unsplash.com/photo-1519699047748-de8e457a634e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'
+    ],
     type: WigType.FULL_WIG,
     length: 'Long',
     condition: WigCondition.LIKE_NEW,
@@ -69,7 +78,10 @@ export const MOCK_WIGS: Wig[] = [
     title: 'Kinky Curly Afro Wig',
     description: 'Big hair don\'t care! This unit is full and bouncy. Great for protective styling.',
     price: 800,
-    images: ['https://picsum.photos/400/500?random=6'],
+    images: [
+      'https://images.unsplash.com/photo-1605497788044-5a90406410d2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+      'https://images.unsplash.com/photo-1522337360705-8754d8722b39?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'
+    ],
     type: WigType.FULL_WIG,
     length: 'Medium Length',
     condition: WigCondition.FAIR,
@@ -85,7 +97,10 @@ export const MOCK_WIGS: Wig[] = [
     title: 'Bone Straight Extension Clip-ins',
     description: 'Silky smooth bone straight clip-ins. 10 pieces. 100% Human Hair.',
     price: 1200,
-    images: ['https://picsum.photos/400/500?random=7'],
+    images: [
+      'https://images.unsplash.com/photo-1522337660859-02fbefca4702?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+      'https://images.unsplash.com/photo-1533519842415-115f013d2f95?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'
+    ],
     type: WigType.EXTENSION,
     length: 'Medium Length',
     condition: WigCondition.LIKE_NEW,
@@ -101,7 +116,10 @@ export const MOCK_WIGS: Wig[] = [
     title: 'Deep Wave Bob',
     description: 'Wet and wavy look. Very low maintenance. Comes with wig cap and band.',
     price: 1500,
-    images: ['https://picsum.photos/400/500?random=8'],
+    images: [
+      'https://images.unsplash.com/photo-1562004760-aceed7bb0fe3?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+      'https://images.unsplash.com/photo-1521119989659-a83eee488058?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'
+    ],
     type: WigType.FULL_WIG,
     length: 'Short',
     condition: WigCondition.GOOD,
